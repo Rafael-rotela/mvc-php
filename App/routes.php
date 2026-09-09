@@ -8,10 +8,10 @@ switch($url)
     case '/':
         echo "pagina inicial";
         break;
-    case '/Aluno':
+    case '/mvc-php/Aluno':
         AlunoController::listar();
         break;
-    case '/Aluno/Cadastro':
+    case '/mvc-php/Aluno/Cadastro':
         AlunoController::cadastro();
         break;
 }
