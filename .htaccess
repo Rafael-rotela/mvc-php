@@ -2,6 +2,8 @@ RewriteEngine On
 
 Options -Indexes
 
+RewriteRule ^$ App/index.php [L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+RewriteRule ^(.*)$ App/index.php?url=$1 [QSA,L]

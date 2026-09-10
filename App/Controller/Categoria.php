@@ -2,24 +2,23 @@
 
 namespace App\Controller;
 
-use App\Model\Aluno;
 
-final class AlunoController
+use App\Model\Categoria;
+
+final class CategoriaController
 {
     public static function cadastro() : void
     {
-        $model = new Aluno();
-        $model->id = 9;
+        $model = new Categoria();
+
         $model->nome = 'Rafael';
-        $model->ra = 124.123;
-        $model->curso = 'Eng.Software';
+        $model->descricao = 'Rafael';
         $model->save();
     }
 
     public static function listar() : void
     {
-        echo "listar";
-        $aluno = new Aluno();
+        $aluno = new Categoria();
         $aluno->getAllRows();
     }
 }
