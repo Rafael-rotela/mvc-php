@@ -15,7 +15,7 @@ final class Aluno
 
     public function getById(int $id): ?Aluno
     {
-         return (new AlunoDAO())->selectById($id);
+        return (new AlunoDAO())->selectById($id);
     }
 
     public function getAllRows(): array
@@ -25,6 +25,6 @@ final class Aluno
 
     public function delete(int $id): bool
     {
-         return (new AlunoDAO())->delete();
+        return (new AlunoDAO())->delete($id);
     }
 }

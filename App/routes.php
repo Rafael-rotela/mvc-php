@@ -1,6 +1,9 @@
 <?php
 
-use App\Controller\{AlunoController}; 
+use App\Controller\{
+    AlunoController,
+    UsuarioController
+    }; 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch($url)
@@ -13,5 +16,11 @@ switch($url)
         break;
     case '/mvc-php/Aluno/Cadastro':
         AlunoController::cadastro();
+        break;
+    case '/mvc-php/Usuario/Cadastro':
+        UsuarioController::cadastro();
+        break;
+    case '/mvc-php/Usuario/Listar':
+        UsuarioController::listar();
         break;
 }
